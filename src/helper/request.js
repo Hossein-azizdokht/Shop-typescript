@@ -1,4 +1,4 @@
-import getAccessToken from "../helper/getAccesstoken";
+// import getAccessToken from "../helper/getAccesstoken";
 
 function joinURL(baseURL, url) {
     return `${baseURL}/${url}`
@@ -6,16 +6,16 @@ function joinURL(baseURL, url) {
 
 // const domain = "https://172.17.1.132/api"
 // const domain = "https://192.168.56.101/api"
-const domain = "https://sbuservices.parstechnology.ir/api"
+const domain = "https://api.parstechnology.ir/api"
 class Services {
 
     //---REQUEST FUNCTION
-    request(url, method = "POST", data = null) {
-        const Authorization = getAccessToken();
+    async request(url, method = "POST", data = null) {
+        // const Authorization = getAccessToken();
         const headers = {
             "Accept": "application/json",
             "Content-type": "application/json",
-            Authorization: Authorization
+            // Authorization: Authorization
         }
         url = joinURL(domain, url);
         console.log(url);
@@ -26,7 +26,7 @@ class Services {
         if (data) {
             options.body = JSON.stringify({ ...data })
         }
-        return fetch(url, options)
+        return await fetch(url, options)
     }
     //---POST 
     post(url, data) {
@@ -41,7 +41,6 @@ class Services {
             url = `${url}/${id}`
         }
         return this.request(url, method).then(res => res.json())
-
     }
     delete(url) {
         const method = "DELETE";
