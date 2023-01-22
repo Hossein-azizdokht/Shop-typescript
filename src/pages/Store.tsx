@@ -4,14 +4,16 @@ import { StoreItem } from '../components/store/storItem';
 
 const Store = () => {
 
-  const [data, setData] = useState([])
-  async function getData() {
+  
+  const [data, setData] = useState([])//store data state
+  
+  async function getData() {//get store data from server
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
     console.log(data);
     setData(data);
-
   }
+  
   useEffect(() => {
     getData();
   }, [])
@@ -19,7 +21,6 @@ const Store = () => {
   return (
     <Row>
       {data?.map((item: any,index) => (
-        // <div key={index}>{item.category}</div>
         <StoreItem key={index} {...item} />
       ))}
     </Row>
