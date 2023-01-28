@@ -52,7 +52,7 @@ export const Filter = (props: any) => {
                 {props.data?.map((item: filtersType) => (
                     <div key={`radio-${item.id}`} className="">
                         <Form.Check
-                            type='radio'
+                            type='checkbox'
                             name={`r-${item.name}`}
                             id={`radio-${item.name + item.id}`}
                             label={`r-${item.name}`}

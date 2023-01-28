@@ -6,12 +6,12 @@ import { formatCurrency } from '../../utilities/formatCurrency'
 import { useSpring, animated } from '@react-spring/web'
 type StoreItemProps = {
     id: number,
-    title: string,
+    Post_Title: string,
     description: string,
     price: number,
     image: string,
 }
-export function StoreItem({ id, title, description, price, image }: StoreItemProps) {
+export function StoreItem({ id, Post_Title, description, price, image }: StoreItemProps) {
     const { getItemQuantity, increasCartQuantity, decreasCartQuantity, removeFromCart } = useShoppingCart();
     const quantity = getItemQuantity(id);
 
@@ -37,7 +37,7 @@ export function StoreItem({ id, title, description, price, image }: StoreItemPro
                     <Card.Body className='d-flex flex-column align-items-start justify-content-between h-100'>
 
                         <h5 className=''>{formatCurrency(price)}</h5>
-                        <div className='text-nowrap overflow-hidden text-truncate me-3 w-100' title={title}>{title}</div>
+                        <div className='text-nowrap overflow-hidden text-truncate me-3 w-100' title={Post_Title}>{Post_Title}</div>
 
 
                         {quantity === 0 ? (

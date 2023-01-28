@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { ShoppingCartProvider } from './context/shopingCartContext'
@@ -7,11 +7,14 @@ import Store from './pages/Store';
 import About from './pages/About';
 import Sidebar from './components/nav/nav';
 
+
+
 function App() {
+
   return (
     <ShoppingCartProvider>
       {/* <Navbar /> */}
-      <Sidebar/>
+      <Sidebar />
       <Container>
         <Routes>
           <Route path='/' element={<Home />}></Route>

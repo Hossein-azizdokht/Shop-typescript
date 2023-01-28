@@ -13,21 +13,22 @@ function Sidebar() {
     const { openCart, cartQuantity } = useShoppingCart();
     return (
         <>
-            {['lg'].map((expand: any) => (
-                <Navbar key={expand} bg="dark" variant="dark" expand={expand} className="mb-3 position-sticky top-0">
+          
+                <Navbar bg="white" variant="light" expand='lg' className="mb-3 position-sticky top-0">
                     <Container>
-                        <Navbar.Brand href="#" className='me-auto'>
-                            <img src='./img/amazon-logo.svg' width='90px' />
+                        <Navbar.Brand href="#" className='me-auto pe-5'>
+                            <img src='./img/logo.svg' width='150px' />
                         </Navbar.Brand>
 
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
                         <Navbar.Offcanvas
-                            id={`offcanvasNavbar-expand-${expand}`}
-                            aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+                            id={`offcanvasNavbar-expand`}
+                            aria-labelledby={`offcanvasNavbarLabel-expand`}
                             placement="end"
+                            
                         >
                             <Offcanvas.Header closeButton>
-                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
                                     Offcanvas
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
@@ -38,7 +39,7 @@ function Sidebar() {
 
                                     <NavDropdown
                                         title="Dropdown"
-                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        id={`offcanvasNavbarDropdown-expand`}
                                     >
                                         <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                                         <NavDropdown.Item href="#action4">
@@ -65,7 +66,7 @@ function Sidebar() {
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                         {cartQuantity > 0 && (
-                            <Button variant="default" onClick={openCart} className="basket ms-auto text-white">
+                            <Button variant="default" onClick={openCart} className="basket ms-auto">
                                 <span>{cartQuantity}</span>
                                 <FiArchive />
                             </Button>
@@ -73,7 +74,7 @@ function Sidebar() {
 
                     </Container>
                 </Navbar>
-            ))}
+        
         </>
     );
 }
