@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext, createContext, ReactNode, useState } from 'react'
-import ShoppingCart from '../components/basket/ShoppingCart'
+import ShoppingCart from '../components/store/basket/ShoppingCart'
 
 
 // Types ------------------------------------

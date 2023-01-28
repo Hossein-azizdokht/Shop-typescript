@@ -1,18 +1,21 @@
-.basket {
-  position: relative;
-  svg{
-    font-size: x-large;
-  }
-  span {
-    margin: 0 8px;
-    padding: 2px;
-    background-color: #ff7a08;
-    color: #fff;
-    min-width: 1.7rem;
-    display: inline-block;
-    border-radius: 36px;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: 500;
+.navbar{
+  z-index: 1;
+  .basket {
+    position: relative;
+    svg{
+      font-size: x-large;
+    }
+    span {
+      margin: 0 8px;
+      padding: 2px;
+      background-color: #ff7a08;
+      color: #fff;
+      min-width: 1.7rem;
+      display: inline-block;
+      border-radius: 36px;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 500;
+    }
   }
 }

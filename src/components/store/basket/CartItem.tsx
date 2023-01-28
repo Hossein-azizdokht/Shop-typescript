@@ -1,5 +1,5 @@
 import React from 'react'
-import { useShoppingCart } from './../../context/shopingCartContext';
+import { useShoppingCart } from '../../../context/shopingCartContext';
 type cartItemProps = {
     id: number,
     quantity: number

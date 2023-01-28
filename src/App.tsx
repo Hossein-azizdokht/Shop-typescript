@@ -5,12 +5,13 @@ import { ShoppingCartProvider } from './context/shopingCartContext'
 import Home from './pages/Home';
 import Store from './pages/Store';
 import About from './pages/About';
-import { Navbar } from './components/Navbar';
+import Sidebar from './components/nav/nav';
 
 function App() {
   return (
     <ShoppingCartProvider>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Sidebar/>
       <Container>
         <Routes>
           <Route path='/' element={<Home />}></Route>
