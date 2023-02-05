@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Badge, Button, Card, Col, ProgressBar, Row, Spinner } from 'react-bootstrap';
-import Skeleton from 'react-loading-skeleton';
+import { Badge, Card, Col, Row, Spinner } from 'react-bootstrap';
 import { StoreItem } from '../components/store/storItem';
 
 import { Filter } from './../components/store/filter/filter';
 import { Brands } from './../_mock/filters';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { StoreFilterLoding, StoreItemLoding } from '../components/store/storeLodings';
-import { FiArchive, FiFilter } from 'react-icons/fi';
+import { FiFilter } from 'react-icons/fi';
+import Breadcrumbs from '../components/breadcrumb';
 const Store = () => {
 
   // type dataType = {
@@ -27,7 +27,7 @@ const Store = () => {
       console.log(dataLoad);
       setData(data.concat(dataLoad));
       setIsLoading(false)
-    }, 1500);
+    }, 200);
 
   };
 
@@ -48,6 +48,13 @@ const Store = () => {
   return (
     <>
       <Row>
+        <Col>
+          <div className='breadcrumb'>
+            <Breadcrumbs />
+          </div>
+        </Col>
+      </Row>
+      <Row>
         <Col lg={3} md={4} sm={6}>
           <Card className='p-4 position-sticky top-0'>
             <h5>Filters</h5>
@@ -62,7 +69,6 @@ const Store = () => {
         <Col lg={9} md={8} sm={6}>
           <div className='d-flex'>
             <FiFilter size='1rem' className='m-1 opacity-50' />
-
             <div className='d-flex'>
               <div className='small-label bold me-3'>Order by: </div>
               <div className='small-label bold me-3'>Popular </div>
@@ -85,7 +91,7 @@ const Store = () => {
                       role="status"
                       aria-hidden="true"
                     />
-                    <div style={{ letterSpacing: '8px', textDecoration: 'unset' }}> LOADING</div>
+                    <div style={{ letterSpacing: '8px', textDecoration: 'unset' }}>LOADING</div>
                   </Badge>
                 </p>
               )}

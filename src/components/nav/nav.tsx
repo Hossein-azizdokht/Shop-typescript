@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 import { useShoppingCart } from './../../context/shopingCartContext';
 import { FiArchive } from 'react-icons/fi';
 
-function Sidebar() {
+function Header() {
     const { openCart, cartQuantity } = useShoppingCart();
     return (
         <>
@@ -79,4 +79,4 @@ function Sidebar() {
     );
 }
 
-export default Sidebar;
+export default Header;

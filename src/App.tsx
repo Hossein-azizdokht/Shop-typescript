@@ -5,7 +5,8 @@ import { ShoppingCartProvider } from './context/shopingCartContext'
 import Home from './pages/Home';
 import Store from './pages/Store';
 import About from './pages/About';
-import Sidebar from './components/nav/nav';
+import Breadcrumbs from './components/breadcrumb';
+import Header from './components/nav/nav';
 
 
 
@@ -14,8 +15,9 @@ function App() {
   return (
     <ShoppingCartProvider>
       {/* <Navbar /> */}
-      <Sidebar />
+      <Header />
       <Container>
+   
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/store' element={<Store />}></Route>
