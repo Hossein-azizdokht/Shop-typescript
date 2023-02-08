@@ -1,14 +1,18 @@
 
 
+import React, { useEffect, useState } from 'react'
 import { Hero } from "../components/home/hero";
-import ProductCategories from "../components/home/productsCategories";
+import CategoryItems from '../components/home/productsCategories';
 
+//--------------------------------
 const Home = () => {
+
+
 
   return (
     <section>
       <Hero />
-      <ProductCategories/>
+      <CategoryItems/>
     </section>
   )
 }

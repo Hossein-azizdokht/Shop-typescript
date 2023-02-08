@@ -1,15 +1,29 @@
 
-import React, { FC } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { Col, Row } from "react-bootstrap";
+import Data from '../../_mock/categories'
+import CategoryItem from './pCategoryItem';
 
-// interface productCatProps {
-//     data: []
-// }
-const ProductCategories= () => {
+//TYPES
+interface categoryDetails {
+    id: number;
+    name: string;
+    cover: string;
+    url: string;
+};
+
+//---------------------------------------------
+
+const CategoryItems = () => {
+
+    //States
+    const [categoryData, setCategoryData] = useState<categoryDetails[]>([]);
+    //-------------------------------------
+
+    //Motions
     const { scrollYProgress } = useScroll();
     const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
-    // console.log(data);
     const cardVariants: Variants = {
         offscreen: {
             y: 100,
@@ -26,6 +40,14 @@ const ProductCategories= () => {
             }
         }
     };
+    //-------------------------------------
+
+    useEffect(() => {
+        setCategoryData(Data)
+        console.log(categoryData);
+    }, []);
+
+
     return (
         <section>
             <motion.div
@@ -35,28 +57,13 @@ const ProductCategories= () => {
                 viewport={{ once: true, amount: 0.8 }}
             >
                 <Row>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
-                    <motion.div className="col-md-2" variants={cardVariants}>
-                        asdasdasddadasd
-                    </motion.div>
+                    {categoryData?.map(item => (
+                        <CategoryItem key={item.id} data={item} />
+                    ))}
                 </Row>
             </motion.div>
         </section>
     )
 }
 
-export default ProductCategories;
+export default CategoryItems;
