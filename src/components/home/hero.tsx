@@ -1,5 +1,15 @@
+import { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper';
+
 
 export function Hero() {
     return (
@@ -20,6 +30,14 @@ export function Hero() {
                         slidesPerView={1}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Autoplay, Pagination]}
                     >
                         <SwiperSlide>
 
@@ -40,7 +58,7 @@ export function Hero() {
                                 <img src="./img/slide/2.jpg" />
                             </div>
                         </SwiperSlide>
-
+                        
                     </Swiper>
                 </Col>
             </Row>
