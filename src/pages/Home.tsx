@@ -1,15 +1,18 @@
-import { Col, Container, Row } from "react-bootstrap"
 
 
+import React, { useEffect, useState } from 'react'
+import { Hero } from "../components/home/hero";
+import CategoryItems from '../components/home/productsCategories';
+
+//--------------------------------
 const Home = () => {
+
+
+
   return (
     <section>
-      <Container>
-        <Row>
-          <Col lg={4}>asdasd</Col>
-          <Col lg={8}>asdasd</Col>
-        </Row>
-      </Container>
+      <Hero />
+      <CategoryItems/>
     </section>
   )
 }

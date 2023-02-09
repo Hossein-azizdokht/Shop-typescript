@@ -41,8 +41,8 @@ export function StoreItem({ id, Post_Title, description, price, image }: StoreIt
 
 
                         {quantity === 0 ? (
-                            <Button variant='light' size='sm' onClick={() => increasCartQuantity(id)} className='w-auto mt-auto' style={{ fontSize: '1.2rem' }}>
-                                <FiShoppingBag /><FiPlus />
+                            <Button variant='light' onClick={() => increasCartQuantity(id)} className='w-auto mt-auto d-flex align-items-center' style={{ fontSize: '1.2rem' }}>
+                                <h6 className='m-0'><FiShoppingBag className='me-2' /><small>Add to cart</small></h6>
                             </Button>
                         ) : (
                             <div className='d-flex align-items-center' style={{ gap: '0.5rem' }}>

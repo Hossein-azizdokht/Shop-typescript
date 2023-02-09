@@ -33,7 +33,20 @@ $font-path: "../fonts/OpenSans/OpenSans-";
 
 body{
     font-family: 'opensans';
+    font-size: 14px;
 }
 .overflow-unset{
     overflow: unset !important;
 }
+
+
+.progress-barr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: rgb(212, 149, 96);
+    transform-origin: 0%;
+    z-index: 100;
+  }
