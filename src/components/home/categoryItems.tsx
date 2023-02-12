@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react'
-import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import { Col, Row } from "react-bootstrap";
+import { motion} from "framer-motion";
+import { Row } from "react-bootstrap";
 import Data from '../../_mock/categories'
-import CategoryItem from './pCategoryItem';
+import SingleCategoryItem from './singleCategoryItem';
 
 //TYPES
 interface categoryDetails {
@@ -22,30 +22,30 @@ const CategoryItems = () => {
     //-------------------------------------
 
     //Motions
-    const { scrollYProgress } = useScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
-    const cardVariants: Variants = {
-        offscreen: {
-            y: 100,
-            opacity: 0
-        },
-        onscreen: {
-            opacity: 1,
-            y: 50,
-            transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 0.8,
-                delay: 0.5
-            }
-        }
-    };
+    // const { scrollYProgress } = useScroll();
+    // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+    // const cardVariants: Variants = {
+    //     offscreen: {
+    //         y: 100,
+    //         opacity: 0
+    //     },
+    //     onscreen: {
+    //         opacity: 1,
+    //         y: 50,
+    //         transition: {
+    //             type: "spring",
+    //             bounce: 0.4,
+    //             duration: 0.8,
+    //             delay: 0.5
+    //         }
+    //     }
+    // };
     //-------------------------------------
 
     useEffect(() => {
         setCategoryData(Data)
         console.log(categoryData);
-    }, []);
+    }, [categoryData]);
 
 
     return (
@@ -58,7 +58,7 @@ const CategoryItems = () => {
             >
                 <Row>
                     {categoryData?.map(item => (
-                        <CategoryItem key={item.id} data={item} />
+                        <SingleCategoryItem key={item.id} data={item} />
                     ))}
                 </Row>
             </motion.div>

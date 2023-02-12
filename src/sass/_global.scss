@@ -38,7 +38,13 @@ body{
 .overflow-unset{
     overflow: unset !important;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        color: inherit;
+    }
+}
 
 .progress-barr {
     position: fixed;

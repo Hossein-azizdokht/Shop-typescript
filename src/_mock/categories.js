@@ -1,37 +1,37 @@
 export default [
     {
         "id": 1,
-        "name": "home",
+        "name": "Home",
         "cover": "/img/catogories/home.webp",
         "url": "#"
     },
     {
         "id": 2,
-        "name": "digit",
+        "name": "Digital",
         "cover": "/img/catogories/digit.webp",
         "url": "#"
     },
     {
         "id": 3,
-        "name": "digit",
+        "name": "Fashion",
         "cover": "/img/catogories/bag-shoes.webp",
         "url": "#"
     },
     {
         "id": 4,
-        "name": "digit",
+        "name": "Mobile",
         "cover": "/img/catogories/mobile.webp",
         "url": "#"
     },
     {
         "id": 5,
-        "name": "digit",
+        "name": "Sport",
         "cover": "/img/catogories/sport.webp",
         "url": "#"
     },
     {
         "id": 6,
-        "name": "digit",
+        "name": "Beauty & Healthy",
         "cover": "/img/catogories/accessories.webp",
         "url": "#"
     },

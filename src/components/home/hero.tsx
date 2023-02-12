@@ -1,7 +1,7 @@
-import { useRef } from "react";
+
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion, useScroll, useTransform, Variants } from "framer-motion";
+import { motion ,Variants } from "framer-motion";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 
 
 export function Hero() {
