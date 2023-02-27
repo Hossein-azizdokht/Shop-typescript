@@ -16,14 +16,11 @@ function App() {
     <ShoppingCartProvider>
       {/* <Navbar /> */}
       <Header />
-      <Container>
-   
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/store' element={<Store />}></Route>
           <Route path='/about' element={<About />}></Route>
         </Routes>
-      </Container>
     </ShoppingCartProvider>
   );
 }

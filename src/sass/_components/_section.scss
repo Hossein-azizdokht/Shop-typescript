@@ -1,0 +1,37 @@
+.section {
+  &-title {
+    color: #888;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    span {
+      padding: 0 1.5rem 0 0;
+      background-color: #fff;
+      position: relative;
+      top: 11px;
+      font-weight: 200;
+      font-size: 1.5rem;
+    }
+  }
+  .wave-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  &.hasBg {
+    padding: 4rem 0 8rem 0;
+    &.cyan {
+      background-color: rgb(31, 47, 83);
+      .section-title {
+        background-color: rgb(31, 47, 83);
+        border-bottom: 1px solid rgba(221, 221, 221, 0.226);
+        span {
+          color: #fff;
+          background-color: rgb(31, 47, 83);
+        }
+      }
+    }
+  }
+}
