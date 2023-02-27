@@ -1,6 +1,9 @@
 @import 'global';
+@import 'variables';
 @import 'mixins';
 @import 'header';
+@import '_components/section';
+@import 'home';
 @import 'typography';
 @import '_components/homeCategories';
 @import 'utilities';

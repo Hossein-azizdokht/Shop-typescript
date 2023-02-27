@@ -25,7 +25,7 @@ const SingleCategoryItem = ({ data }: Props) => {
         onscreen: {
             opacity: 1,
             scale:1,
-            y: 50,
+            y: 0,
             transition: {
                 duration: 0.5,
             }

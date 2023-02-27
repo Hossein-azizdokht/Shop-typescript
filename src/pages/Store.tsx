@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Badge, Card, Col, Row, Spinner } from 'react-bootstrap';
+import { Badge, Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { StoreItem } from '../components/store/storItem';
 
 import { Filter } from './../components/store/filter/filter';
@@ -46,7 +46,7 @@ const Store = () => {
   }, [])
 
   return (
-    <>
+    <Container>
       <Row>
         <Col>
           <div className='breadcrumb'>
@@ -109,7 +109,7 @@ const Store = () => {
         </Col>
       </Row>
 
-    </>
+    </Container>
   )
 }
 

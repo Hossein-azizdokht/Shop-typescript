@@ -1,0 +1,46 @@
+.section {
+  &-title {
+    color: #888;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    span {
+      padding: 0 1.5rem 0 0;
+      background-color: #fff;
+      position: relative;
+      top: 11px;
+      font-weight: 200;
+      font-size: 1.5rem;
+    }
+  }
+  .wave-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    &.top {
+      top: 0;
+      bottom: auto;
+      transform: rotate(180deg);
+    }
+  }
+  &.hasBg {
+    padding: 8rem 0 4rem 0;
+    &.cyan {
+      background-image: linear-gradient(
+        to bottom,
+        rgb(23, 30, 51) 100%,
+        rgb(15, 66, 172) 40%
+      );
+      .section-title {
+        background-color: rgba(31, 47, 83, 0);
+        border-bottom: 1px solid rgba(#caab83, 0.226);
+        span {
+          color: var(--gold-text);
+          background-color: rgb(23, 30, 51);
+        }
+      }
+    }
+  }
+}

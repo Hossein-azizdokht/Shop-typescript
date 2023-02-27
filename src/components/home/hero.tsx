@@ -1,7 +1,7 @@
 
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion ,Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -29,12 +29,10 @@ export function Hero() {
                 delay: 0.5,
             }
         }
-
-
     };
     return (
         <Container>
-            <Row className="mt-5 pt-5">
+            <Row className="mt-5">
                 <Col lg={4}>
                     <div className="slide-item small mb-2">
 
@@ -62,24 +60,23 @@ export function Hero() {
                         <SwiperSlide>
 
                             <div className="slide-item big">
-
-                                    <div className="text">
-                                <motion.div className="col-md-2" variants={cardVariants}>
-                                        <h1>NEW 2023 COLLECTION</h1>
-                                </motion.div>
-                                        <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
-                                    </div>
+                                <div className="text">
+                                    <h1>NEW 2023 COLLECTION</h1>
+                                    <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
+                                </div>
                                 <img src="./img/slide/1.jpg" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide-item big">
-                                <motion.div className="col-md-2" variants={cardVariants}>
-                                    <div className="text">
-                                        <h1>NEW 20223 COLLECTION</h1>
-                                        <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
-                                    </div>
-                                </motion.div>
+                                <div className="text">
+                                    {/* <motion.div className="col-md-2" variants={cardVariants}> */}
+                                    <h1>NEW 2023 COLLECTION</h1>
+                                    {/* </motion.div> */}
+
+                                    <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
+
+                                </div>
                                 <img src="./img/slide/2.jpg" />
                             </div>
                         </SwiperSlide>
