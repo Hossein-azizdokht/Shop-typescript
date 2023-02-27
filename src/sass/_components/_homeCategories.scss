@@ -20,5 +20,28 @@
         font-weight: bold;
       }
     }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 37%;
+      right: 50%;
+      width: 8px;
+      height: 8px;
+      display: block;
+      background: rgb(255, 255, 255);
+      transform: translate(50%,-50%);
+      border-radius: 28px;
+      box-shadow: 0 0 0 39px #ecd8ad;
+      z-index: -1;
+      transition: all 0.1s ease-in;
+      opacity: 0;
+    }
+    &:hover{
+
+      &:before {
+        box-shadow: 0 0 0 70px #ffffff7a, 0 0 0 72px #e2cc9c7a;
+        opacity: 0.5;
+      }
+    }
   }
 }
