@@ -1,8 +1,8 @@
 
 
-import React, { useEffect, useState } from 'react'
+
 import { Hero } from "../components/home/hero";
-import CategoryItems from '../components/home/productsCategories';
+import CategoryItems from '../components/home/categoryItems';
 
 //--------------------------------
 const Home = () => {

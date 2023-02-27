@@ -1,5 +1,24 @@
-.category{
-    &-item{
-        img{width: 120px;display: block;margin: auto;}
+.category {
+  &-item {
+    img {
+      width: 120px;
+      display: block;
+      margin: auto;
+      @include transition(all 0.2s);
     }
+    & > div {
+      text-align: center;
+      @include transition(all 0.2s);
+    }
+    &:hover {
+      img {
+        transform: translateY(-5%);
+      }
+      & > div {
+        color: #4e515f;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 }

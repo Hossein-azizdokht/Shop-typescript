@@ -9,7 +9,7 @@ const Breadcrumbs = () => {
             {breadcrumbs.map(({
                 match,
                 breadcrumb
-            }) => (
+            }:any) => (
                 <NavLink key={match.pathname} to={match.pathname}>{breadcrumb}</NavLink>
 
             ))}
