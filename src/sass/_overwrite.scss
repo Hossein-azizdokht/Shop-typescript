@@ -1,1 +1,39 @@
-.card{border-radius: 0 !important;}
+.card {
+  border-radius: 0 !important;
+}
+.swiper-slide {
+  box-shadow: 0 25px 24px -14px #00000069;
+}
+.swiper-button-next {
+  left: auto;
+  top: 44px !important;
+  background-color: rgb(23, 30, 51);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  &:hover{
+    box-shadow: 0 0 0 50px rgba(255,255,255,0.1) inset;
+  }
+  &:after {
+    font-size: 15px;
+    color: var(--gold-text-dark);
+    font-weight: 900;
+  }
+}
+.swiper-button-prev {
+  background-color: rgb(23, 30, 51);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  left: unset;
+  right: 46px;
+  top: 44px !important;
+  &:hover{
+    box-shadow: 0 0 0 50px rgba(255,255,255,0.1) inset;
+  }
+  &:after {
+    color: var(--gold-text-dark);
+    font-size: 15px;
+    font-weight: 900;
+  }
+}

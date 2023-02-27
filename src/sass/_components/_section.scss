@@ -19,17 +19,26 @@
     right: 0;
     left: 0;
     overflow: hidden;
+    &.top {
+      top: 0;
+      bottom: auto;
+      transform: rotate(180deg);
+    }
   }
   &.hasBg {
-    padding: 4rem 0 8rem 0;
+    padding: 8rem 0 4rem 0;
     &.cyan {
-      background-color: rgb(31, 47, 83);
+      background-image: linear-gradient(
+        to bottom,
+        rgb(23, 30, 51) 100%,
+        rgb(15, 66, 172) 40%
+      );
       .section-title {
-        background-color: rgb(31, 47, 83);
-        border-bottom: 1px solid rgba(221, 221, 221, 0.226);
+        background-color: rgba(31, 47, 83, 0);
+        border-bottom: 1px solid rgba(#caab83, 0.226);
         span {
-          color: #fff;
-          background-color: rgb(31, 47, 83);
+          color: var(--gold-text);
+          background-color: rgb(23, 30, 51);
         }
       }
     }

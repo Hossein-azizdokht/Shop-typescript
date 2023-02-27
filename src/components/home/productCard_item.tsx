@@ -20,7 +20,7 @@ const ProductCard = ({ id, title, price, category, description, image }: product
                 {/* <Card.Header>{title}</Card.Header> */}
 
                 <Card.Body className='d-flex flex-column align-items-start justify-content-between h-100'>
-                    <h5 className=''>{formatCurrency(price)}</h5>
+                    <h5 className='price'>{formatCurrency(price)}</h5>
                     <div className='text-nowrap overflow-hidden text-truncate me-3 w-100' title={title}>{title}</div>
                 </Card.Body>
             </Card>

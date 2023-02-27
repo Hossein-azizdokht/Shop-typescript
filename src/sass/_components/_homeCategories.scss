@@ -10,6 +10,7 @@
       @include transition(all 0.2s);
     }
     & > div {
+      color: var(--gold-text-dark);
       text-align: center;
       @include transition(all 0.2s);
     }
@@ -18,7 +19,7 @@
         transform: translateY(-5%);
       }
       & > div {
-        color: #4e515f;
+        
         font-size: 1rem;
         font-weight: bold;
       }
