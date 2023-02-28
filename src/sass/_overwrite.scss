@@ -1,8 +1,8 @@
 .card {
   border-radius: 0 !important;
 }
-.swiper-slide {
-  box-shadow: 0 25px 24px -14px #00000069;
+.swiper{
+  z-index: 0;
 }
 .swiper-button-next {
   left: auto;

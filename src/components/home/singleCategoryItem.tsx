@@ -34,7 +34,7 @@ const SingleCategoryItem = ({ data }: Props) => {
 
     return (
 
-        <motion.div className="col-md-2" variants={cardVariants}>
+        <motion.div className="col-md-2 col-6" variants={cardVariants}>
             <Link to='/store'>
                 <div className='category-item' title={data.name}>
                     <img src={`${data.cover}`} alt={data.name} style={{ backgroundClip: 'content-box' }} />

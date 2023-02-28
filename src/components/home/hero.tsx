@@ -58,11 +58,13 @@ export function Hero() {
                         modules={[Autoplay, Pagination]}
                     >
                         <SwiperSlide>
-
                             <div className="slide-item big">
                                 <div className="text">
-                                    <h1>NEW 2023 COLLECTION</h1>
-                                    <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
+                                    <div>
+                                        <h2 className="light">NEW 2023</h2>
+                                        <h1 className="bold">COLLECTION</h1>
+                                    </div>
+                                    <h6>Lorem, ipsum is a simple paragraph that designers ...</h6>
                                 </div>
                                 <img src="./img/slide/1.jpg" />
                             </div>
@@ -70,17 +72,15 @@ export function Hero() {
                         <SwiperSlide>
                             <div className="slide-item big">
                                 <div className="text">
-                                    {/* <motion.div className="col-md-2" variants={cardVariants}> */}
-                                    <h1>NEW 2023 COLLECTION</h1>
-                                    {/* </motion.div> */}
-
-                                    <h6>Lore, ipsum is a simple paragraph that designers ...</h6>
-
+                                    <div>
+                                        <h2 className="light">FOR WOMEN</h2>
+                                        <h1 className="bold">Fashion Style</h1>
+                                    </div>
+                                    <h6>Lorem, ipsum is a simple paragraph that designers ...</h6>
                                 </div>
                                 <img src="./img/slide/2.jpg" />
                             </div>
                         </SwiperSlide>
-
                     </Swiper>
                 </Col>
             </Row>

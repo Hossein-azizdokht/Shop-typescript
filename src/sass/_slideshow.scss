@@ -26,6 +26,21 @@
     transition: all 0.2s ease-in-out;
     backdrop-filter: blur(4px);
     border-radius: 12px;
+    h2{
+      font-weight:60;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color:#000 ;
+      opacity: 0.5;
+    }
+    h1{
+      font-weight: 100;
+      font-size: 3.5rem;
+
+    }
+    h6{
+      font-weight: 300;
+    }
   }
   &:hover {
     .text {
