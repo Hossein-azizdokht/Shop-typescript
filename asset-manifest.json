@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shop-typescript/static/css/main.db623600.css",
-    "main.js": "/Shop-typescript/static/js/main.091794c6.js",
+    "main.js": "/Shop-typescript/static/js/main.f472fd97.js",
     "static/media/OpenSans-Medium.woff2": "/Shop-typescript/static/media/OpenSans-Medium.b0c2024c754a0e4d41e8.woff2",
     "static/media/OpenSans-SemiBold.woff2": "/Shop-typescript/static/media/OpenSans-SemiBold.7a744a52d45323fb2e17.woff2",
     "static/media/OpenSans-Regular.woff2": "/Shop-typescript/static/media/OpenSans-Regular.4ed8dbece213f6100a9e.woff2",
@@ -10,10 +10,10 @@
     "static/media/OpenSans-Bold.woff2": "/Shop-typescript/static/media/OpenSans-Bold.d962b0e2a793312fb2b9.woff2",
     "index.html": "/Shop-typescript/index.html",
     "main.db623600.css.map": "/Shop-typescript/static/css/main.db623600.css.map",
-    "main.091794c6.js.map": "/Shop-typescript/static/js/main.091794c6.js.map"
+    "main.f472fd97.js.map": "/Shop-typescript/static/js/main.f472fd97.js.map"
   },
   "entrypoints": [
     "static/css/main.db623600.css",
-    "static/js/main.091794c6.js"
+    "static/js/main.f472fd97.js"
   ]
 }
